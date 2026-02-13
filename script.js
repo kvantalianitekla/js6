@@ -12,21 +12,21 @@
 // •	გადაამოწმე მონაცემების ტიპები typeof-ით
 // ❗ თუ რომელიმე პირობა არ სრულდება → ისევ ჰკითხე შესაბამისი მონაცემი (while)
 
-let name = prompt("Enter your name:");
+// let name = prompt("Enter your name:");
 
-while (name === null || name.trim() === "" || name.trim().length < 3) {
-  alert("სახელი არ უნდა იყოს ცარიელი. სახელი უნდა იყოს მინიმუმ 3 სიმბოლო");
-  name = prompt("Enter your name again:");
-}
+// while (name === null || name.trim() === "" || name.trim().length < 3) {
+//   alert("სახელი არ უნდა იყოს ცარიელი. სახელი უნდა იყოს მინიმუმ 3 სიმბოლო");
+//   name = prompt("Enter your name again:");
+// }
 
-name = name.trim();
+// name = name.trim();
 
-let age = Number(prompt("Enter your age:"));
+// let age = Number(prompt("Enter your age:"));
 
-while (typeof age !== "number" || isNaN(age) || age < 1 || age > 120) {
-  alert("ასაკი უნდა იყოს 1–120 შორის");
-  age = Number(prompt("Enter your age again:"));
-}
+// while (typeof age !== "number" || isNaN(age) || age < 1 || age > 120) {
+//   alert("ასაკი უნდა იყოს 1–120 შორის");
+//   age = Number(prompt("Enter your age again:"));
+// }
 
 //----------------------------------------------------------------
 
@@ -37,19 +37,19 @@ while (typeof age !== "number" || isNaN(age) || age < 1 || age > 120) {
 // •	ასაკი 18 – 60 → Active User
 // •	ასაკი > 60 → Senior User
 
-let status;
+// let status;
 
-if (age < 18) {
-  status = "Teen User";
-} else if (age <= 60) {
-  status = "Active User";
-} else {
-  status = "Senior User";
-}
+// if (age < 18) {
+//   status = "Teen User";
+// } else if (age <= 60) {
+//   status = "Active User";
+// } else {
+//   status = "Senior User";
+// }
 
-console.log("name:", name);
-console.log("age:", age);
-console.log("status:", status);
+// console.log("name:", name);
+// console.log("age:", age);
+// console.log("status:", status);
 
 //------------------------------------------------------------------
 
@@ -72,28 +72,28 @@ console.log("status:", status);
 // → Normal Theme
 // 👉 გამოიყენე && და ||
 
-function randomColor() {
-  return Math.floor(Math.random() * 256);
-}
+// function randomColor() {
+//   return Math.floor(Math.random() * 256);
+// }
 
-let red = randomColor();
-let green = randomColor();
-let blue = randomColor();
+// let red = randomColor();
+// let green = randomColor();
+// let blue = randomColor();
 
-let rgbColor = `rgb(${red}, ${green}, ${blue})`;
-console.log("RGB color:", rgbColor);
+// let rgbColor = `rgb(${red}, ${green}, ${blue})`;
+// console.log("RGB color:", rgbColor);
 
-let theme;
+// let theme;
 
-if (red < 120 && green < 120 && blue < 120) {
-  theme = "Dark Theme";
-} else if (red > 200 || green > 200 || blue > 200) {
-  theme = "Bright Theme";
-} else {
-  theme = "Normal Theme";
-}
+// if (red < 120 && green < 120 && blue < 120) {
+//   theme = "Dark Theme";
+// } else if (red > 200 || green > 200 || blue > 200) {
+//   theme = "Bright Theme";
+// } else {
+//   theme = "Normal Theme";
+// }
 
-console.log("Theme:", theme);
+// console.log("Theme:", theme);
 
 //--------------------------------------------------------------------
 
@@ -110,20 +110,27 @@ console.log("Theme:", theme);
 // •	ჩარჩო → იგივე ფერი
 // •	მარტივი padding და margin (inline style ან კლასი გაუწერე და css-ში გასტილე)
 
-document.write(`
-  <div
-    style="
-  color: ${rgbColor};
-  border: 2px solid ${rgbColor};
-  padding: 10px;
-  margin: 10px;
-  
-  "
-  >
-    <p>Name: ${name}</p>
-    <p>Age: ${age}</p>
-    <p>Status: ${status}</p>
-    <p>RGB color: ${rgbColor}</p>
-    <p>Theme: ${theme}</p>
-  </div>
-`);
+// document.write(`
+//   <div
+//     style="
+//   color: ${rgbColor};
+//   border: 2px solid ${rgbColor};
+//   padding: 10px;
+//   margin: 10px;
+
+//   "
+//   >
+//     <p>Name: ${name}</p>
+//     <p>Age: ${age}</p>
+//     <p>Status: ${status}</p>
+//     <p>RGB color: ${rgbColor}</p>
+//     <p>Theme: ${theme}</p>
+//   </div>
+// `);
+
+//-------------------------------------------------------------------------
+
+// 5️ საბოლოო შედეგი (რა უნდა დაინახოს მომხმარებელმა)
+// •	ეკრანზე გამოჩნდება ფერადი პროფილის ბარათი
+// •	მონაცემები სწორადაა ვალიდირებული
+// •	Theme ავტომატურად არჩეულია
