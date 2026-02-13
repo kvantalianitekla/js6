@@ -37,16 +37,60 @@
 // •	ასაკი 18 – 60 → Active User
 // •	ასაკი > 60 → Senior User
 
-let status;
+// let status;
 
-if (age < 18) {
-  status = "Teen User";
-} else if (age <= 60) {
-  status = "Active User";
-} else {
-  status = "Senior User";
+// if (age < 18) {
+//   status = "Teen User";
+// } else if (age <= 60) {
+//   status = "Active User";
+// } else {
+//   status = "Senior User";
+// }
+
+// console.log("name:", name);
+// console.log("age:", age);
+// console.log("status:", status);
+
+//------------------------------------------------------------------
+
+// 3️ შემთხვევითი Theme Color (RGB)
+// (Math, Number, String, if, ლოგიკური ოპერატორები)
+// ნაბიჯები:
+// 1.	დააგენერირე სამი რიცხვი:
+// o	red
+// o	green
+// o	blue
+// (თითოეული 0–255 შორის)
+// 2.	შექმენი RGB ფერი ამ ფორმატით:
+// rgb(red, green, blue)
+// 3.	Theme ტიპის განსაზღვრა:
+// •	თუ ყველა ფერის მნიშვნელობა < 120
+// → Dark Theme
+// •	თუ მინიმუმ ერთი მნიშვნელობა > 200
+// → Bright Theme
+// •	სხვა შემთხვევაში
+// → Normal Theme
+// 👉 გამოიყენე && და ||
+
+function randomColor() {
+  return Math.floor(Math.random() * 256);
 }
 
-console.log("name:", name);
-console.log("age:", age);
-console.log("status:", status);
+let red = randomColor();
+let green = randomColor();
+let blue = randomColor();
+
+let rgbColor = `rgb(${red}, ${green}, ${blue})`;
+console.log("RGB color:", rgbColor);
+
+let theme;
+
+if (red < 120 && green < 120 && blue < 120) {
+  theme = "Dark Theme";
+} else if (red > 200 || green > 200 || blue > 200) {
+  theme = "Bright Theme";
+} else {
+  theme = "Normal Theme";
+}
+
+console.log("Theme:", theme);
